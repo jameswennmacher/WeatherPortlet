@@ -36,8 +36,10 @@
     <portlet:param name="action" value="delete"/>
 </portlet:actionURL>
 
-<script type="text/javascript" src="<rs:resourceURL value="/rs/jquery/1.10.2/jquery-1.10.2.min.js"/>"></script>
-<script type="text/javascript" src="<rs:resourceURL value="/rs/jqueryui/1.10.3/jquery-ui-1.10.3.min.js"/>"></script>
+<%-- Currently including our own version of jQuery/jQuery UI because of the addition of the form library.
+     When resolving WPT-70 to use jQuery instead of form, this page could instead use portal's jQuery/fluid. --%>
+<script src="<rs:resourceURL value='//code.jquery.com/jquery-1.10.2.min.js'/>" type="text/javascript"></script>
+<script src="<rs:resourceURL value='//code.jquery.com/ui/1.10.3/jquery-ui.min.js'/>" type="text/javascript"></script>
 <script type="text/javascript" src="<rs:resourceURL value="/rs/fluid/1.5.0/js/fluid-custom.min.js"/>"></script>
 <script type="text/javascript" src="<rs:resourceURL value="/rs/jquery/form/2.28/jquery.form-2.28.min.js"/>"></script>
 <script type="text/javascript" src="${context}/js/weather.min.js"></script>
